@@ -17,7 +17,7 @@ var port = process.env.PORT || 3000;
 
 /** this project needs a db !! **/
 //process.env.DB_URI
-mongoose.connect("mongodb+srv://znha:zCMSOibubd0BPGB2@cluster0.gw1av.mongodb.net/shortUrls?retryWrites=true&w=majority", { useUnifiedTopology: true, useNewUrlParser: true });
+mongoose.connect(process.env.DB_URI, { useUnifiedTopology: true, useNewUrlParser: true });
 var { Schema } = mongoose;
 var myUrlSchema = Schema({
   original: String,
